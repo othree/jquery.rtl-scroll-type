@@ -1,0 +1,3 @@
+jQuery RTL scroll type detector
+
+Horizontal scrollbar with RTL language support have different implement in different browsers.
