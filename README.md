@@ -11,10 +11,11 @@ Firefox has a clearly define in their mdn document. The most right position stan
 
 IE thought the element is flip horizontal. So the most right position is 0. And if it scrolls to left. The value increase.
 
-A table is below to make these cases more clear:
+A table is below to make these cases more clear.
+
+## 3 Types of scrollLeft (scrollWidth = 100)
 
 <table>
-<caption>3 Types of scrollLeft (scrollWidth = 100)</caption>
 <thead>
 <tr>
   <th>Browser</th>
