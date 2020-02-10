@@ -1,15 +1,22 @@
 # jQuery RTL Scroll Type Detector
 
-Horizontal scrollbar with rtl(right to left) language support have different implement in different browsers.
+Horizontal scrollbar with RTL(right to left) language support has different 
+implementations in different browsers.
 
-[scrollLeft][mdn-scrollleft] in rtl element is not defined by any spec or standards. So different browser have different implement.
-As far as I know, there are 3 implements: WebKit, Firefox/Opera, IE. WebKit's implement is the most easy to use implement.
+[scrollLeft][mdn-scrollleft] in RTL element is not defined by any spec or 
+standards. So different browsers have different implementations. As far as I 
+know, there are three implements: WebKit, Firefox/Opera, IE. WebKit's 
+implementation is the easiest to use.
 
-Exactly the same as ltr(left to right) element. Except the initial position of scrollbar controller is at most right position.
+Chrome's RTL scrollbar is the same as LTR(left to right) element. Except for 
+the initial position of the scrollbar controller is at the most right position.
 
-Firefox has a clearly define in their mdn document. The most right position stands for 0. And when user scrolls to left. The value decreases. The value is possible to be negative in this implement.
+Firefox has a clear definition in its MDN document. The most right position 
+stands for 0. And when the user scrolls to the left. The value decreases. The 
+value is possible to be negative in this implement.
 
-IE thought the element is flip horizontal. So the most right position is 0. And if it scrolls to left. The value increase.
+IE thought the element is flip horizontal. So the most right position is 0. 
+And if it scrolls to the left. Value increases.
 
 A table is below to make these cases more clear.
 
@@ -50,7 +57,9 @@ A table is below to make these cases more clear.
 <tbody>
 </table>
 
-This plugin is used to detect which type is the browser are using. Assign the result to jQuery's support object named 'rtlScrollType'. You will need the scrollWidth of the element to transform between these three types of value
+This plugin is designed to detect which type is the browser is using. Assign 
+the result to jQuery's support object named **rtlScrollType**. You will need 
+the scrollWidth of the element to transform between these three types of value.
 
 ## License
 
