@@ -8,10 +8,18 @@
     if (definer.scrollLeft > 0) {
         type = 'default';
     } else {
-        definer.children[0].children[1].scrollIntoView();
-        if (definer.scrollLeft < 0) {
-            type = 'negative';
+        if (definer.children[0].children[1].scrollIntoView) {
+            definer.children[0].children[1].scrollIntoView();
+            if (definer.scrollLeft < 0) {
+                type = 'negative';
+            }
+        } else {
+            definer.scrollLeft = 1;
+            if (definer.scrollLeft === 0) {
+                type = 'negative';
+            }
         }
+
     }
 
     $(definer).remove();
