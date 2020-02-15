@@ -3,8 +3,8 @@
 Horizontal scrollbar with RTL(right to left) language support has different 
 implementations in different browsers.
 
-[scrollLeft][mdn-scrollleft] in RTL element is not defined by any spec or 
-standards. So different browsers have different implementations. As far as I 
+[scrollLeft][mdn-scrollleft] in RTL element is <del>not defined by any spec or 
+standards</del>. So different browsers have different implementations. As far as I 
 know, there are three implements: WebKit, Firefox/Opera, IE. WebKit's 
 implementation is the easiest to use.
 
@@ -60,6 +60,15 @@ A table is below to make these cases more clear.
 This plugin is designed to detect which type is the browser is using. Assign 
 the result to jQuery's support object named **rtlScrollType**. You will need 
 the scrollWidth of the element to transform between these three types of value.
+
+## About Standard
+
+It's defined in [CSSOM View Module][CSSOMVM]. The **negative** type is the 
+chosen one. Chrome has a [plan][chplan] to change its behavior. More 
+information is at #6.
+
+[CSSOMVM]:https://drafts.csswg.org/cssom-view/
+[chplan]:https://www.chromestatus.com/feature/5759578031521792
 
 ## License
 
