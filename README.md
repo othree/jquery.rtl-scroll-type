@@ -34,14 +34,14 @@ A table is below to make these cases more clear.
 </thead>
 <tbody>
 <tr>
-  <td>Chrome/Opera/Edge(Blink)</td>
+  <td>Chrome/Opera(Blink)/Edge(Blink)</td>
   <td>default</td>
   <td>0</td>
   <td>100</td>
   <td>100</td>
 </tr>
 <tr>
-  <td><a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">Spec</a>/Firefox/Old Opera(Presto)</td>
+  <td><a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">Spec</a>/Firefox/Safari/Opera(Presto)</td>
   <td>negative</td>
   <td>-100</td>
   <td>0</td>
