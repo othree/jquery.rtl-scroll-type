@@ -1,0 +1,28 @@
+{
+  "name": "jquery.rtl-scroll-type",
+  "version": "2.0.0-beta",
+  "description": "Detect scrollLeft type under RTL language",
+  "main": "src/jquery.rtl-scroll.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/othree/jquery.rtl-scroll-type.git"
+  },
+  "keywords": [
+    "jquery",
+    "rtl",
+    "scroll",
+    "jquery-plugin"
+  ],
+  "author": {
+    "name": "othree",
+    "url": "https://github.com/othree"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/othree/jquery.rtl-scroll-type/issues"
+  },
+  "homepage": "https://github.com/othree/jquery.rtl-scroll-type#readme"
+}
