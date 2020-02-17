@@ -5,8 +5,7 @@ implementations in different browsers.
 
 [scrollLeft][mdn-scrollleft] in RTL element is <del>not defined by any spec or 
 standards</del>. So different browsers have different implementations. As far as I 
-know, there are three implements: WebKit, Firefox/Opera, IE. WebKit's 
-implementation is the easiest to use.
+know, there are three implements: Chrome(Blink), Firefox/Safari, IE.
 
 Chrome's RTL scrollbar is the same as LTR(left to right) element. Except for 
 the initial position of the scrollbar controller is at the most right position.
@@ -18,7 +17,13 @@ value is possible to be negative in this implement.
 IE thought the element is flip horizontal. So the most right position is 0. 
 And if it scrolls to the left. Value increases.
 
-A table is below to make these cases more clear.
+A table is below to show these types more clear.
+
+This plugin is designed to detect which type is the browser is using. Assign 
+the result to jQuery's support object named **rtlScrollType**. You will need 
+the scrollWidth of the element to transform between these three types of value.
+
+[mdn-scrollleft]:https://developer.mozilla.org/en-US/docs/DOM/element.scrollLeft
 
 ## 3 Types of scrollLeft (scrollWidth = 100)
 
@@ -41,7 +46,7 @@ A table is below to make these cases more clear.
   <td>100</td>
 </tr>
 <tr>
-  <td><a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">Spec</a>/Firefox/Safari/Opera(Presto)</td>
+  <td><a href="https://drafts.csswg.org/cssom-view/#dom-window-scroll">Standard</a>/Firefox/Safari/Opera(Presto)</td>
   <td>negative</td>
   <td>-100</td>
   <td>0</td>
@@ -57,18 +62,21 @@ A table is below to make these cases more clear.
 <tbody>
 </table>
 
-This plugin is designed to detect which type is the browser is using. Assign 
-the result to jQuery's support object named **rtlScrollType**. You will need 
-the scrollWidth of the element to transform between these three types of value.
+## Usage
 
-## About Standard
+See [demo][].
+
+[demo]:https://github.com/othree/jquery.rtl-scroll-type/blob/master/demo/look.html
+
+## Web Standard
 
 It's defined in [CSSOM View Module][CSSOMVM]. The **negative** type is the 
 chosen one. Chrome has a [plan][chplan] to change its behavior. More 
-information is at #6.
+information is at [#6][].
 
 [CSSOMVM]:https://drafts.csswg.org/cssom-view/
 [chplan]:https://www.chromestatus.com/feature/5759578031521792
+[#6]:https://github.com/othree/jquery.rtl-scroll-type/issues/6
 
 ## License
 
@@ -91,6 +99,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-[mdn-scrollleft]:https://developer.mozilla.org/en-US/docs/DOM/element.scrollLeft
 
