@@ -8,7 +8,7 @@
     if (definer.scrollLeft > 0) {
         type = 'default';
     } else {
-        if (definer.children[0].children[1].scrollIntoView) {
+        if (Element.prototype.scrollIntoView) {
             definer.children[0].children[1].scrollIntoView();
             if (definer.scrollLeft < 0) {
                 type = 'negative';
