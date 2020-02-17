@@ -3,6 +3,9 @@
   "version": "2.0.0-beta",
   "description": "Detect scrollLeft type under RTL language",
   "main": "src/jquery.rtl-scroll.js",
+  "files": [
+    "src/jquery.rtl-scroll.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
