@@ -1,7 +1,8 @@
 /*MIT License */
 /*global jQuery */
-(function ($) {
+jQuery(function() {
     'use strict';
+
     var definer = $('<div dir="rtl" style="width: 1px; height: 1px; position: fixed; top: 0px; left: 0px; overflow: hidden"><div style="width: 2px"><div style="display: inline-block; width: 1px"></div><div style="display: inline-block; width: 1px"></div></div></div>').appendTo('body')[0],
         type = 'reverse';
 
@@ -19,9 +20,9 @@
                 type = 'negative';
             }
         }
-
     }
 
     $(definer).remove();
     $.support.rtlScrollType = type;
-}(jQuery));
+});
+
