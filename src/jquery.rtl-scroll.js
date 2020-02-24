@@ -8,7 +8,7 @@ jQuery(function() {
   if (definer.scrollLeft > 0) {
     type = 'default';
   } else {
-    if (Element.prototype.scrollIntoView) {
+    if (typeof Element !== 'undefined' && Element.prototype.scrollIntoView) {
       definer.children[0].children[1].scrollIntoView();
       if (definer.scrollLeft < 0) {
         type = 'negative';
