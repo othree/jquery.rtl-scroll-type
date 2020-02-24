@@ -1,29 +1,29 @@
 # jQuery RTL Scroll Type Detector
 
-Horizontal scrollbar with RTL(right to left) language support has different 
+Horizontal scrollbar with RTL(right to left) language support has different
 implementations in different browsers.
 
-[scrollLeft][mdn-scrollleft] in RTL element is <del>not defined by any spec or 
-standards</del>. So different browsers have different implementations. As far as I 
+[scrollLeft][mdn-scrollleft] in RTL element is <del>not defined by any spec or
+standards</del>. So different browsers have different implementations. As far as I
 know, there are three implements: Chrome(Blink), Firefox/Safari, IE.
 
-Chrome's RTL scrollbar is the same as LTR(left to right) element. Except for 
+Chrome's RTL scrollbar is the same as LTR(left to right) element. Except for
 the initial position of the scrollbar controller is at the most right position.
 
-Firefox has a clear definition in its MDN document. The most right position 
-stands for 0. And when the user scrolls to the left. The value decreases. The 
+Firefox has a clear definition in its MDN document. The most right position
+stands for 0. And when the user scrolls to the left. The value decreases. The
 value is possible to be negative in this implement.
 
-IE thought the element is flip horizontal. So the most right position is 0. 
+IE thought the element is flip horizontal. So the most right position is 0.
 And if it scrolls to the left. Value increases.
 
 A table is below to show these types more clear.
 
-This plugin is designed to detect which type is the browser is using. Assign 
-the result to jQuery's support object named **rtlScrollType**. You will need 
+This plugin is designed to detect which type is the browser is using. Assign
+the result to jQuery's support object named **rtlScrollType**. You will need
 the scrollWidth of the element to transform between these three types of value.
 
-[mdn-scrollleft]:https://developer.mozilla.org/en-US/docs/DOM/element.scrollLeft
+[mdn-scrollleft]: https://developer.mozilla.org/en-US/docs/DOM/element.scrollLeft
 
 ## 3 Types of scrollLeft (scrollWidth = 100)
 
@@ -39,7 +39,7 @@ the scrollWidth of the element to transform between these three types of value.
 </thead>
 <tbody>
 <tr>
-  <td>Chrome/Opera(Blink)/Edge(Blink)</td>
+  <td>Chrome/Opera(Blink)/Edge(Blink)/IE6</td>
   <td>default</td>
   <td>0</td>
   <td>100</td>
@@ -53,7 +53,7 @@ the scrollWidth of the element to transform between these three types of value.
   <td>0</td>
 </tr>
 <tr>
-  <td>IE</td>
+  <td>IE8 and later</td>
   <td>reverse</td>
   <td>100</td>
   <td>0</td>
@@ -66,17 +66,17 @@ the scrollWidth of the element to transform between these three types of value.
 
 See [demo][].
 
-[demo]:https://github.com/othree/jquery.rtl-scroll-type/blob/master/demo/look.html
+[demo]: https://github.com/othree/jquery.rtl-scroll-type/blob/master/demo/look.html
 
 ## Web Standard
 
-It's defined in [CSSOM View Module][CSSOMVM]. The **negative** type is the 
-chosen one. Chrome has a [plan][chplan] to change its behavior. More 
+It's defined in [CSSOM View Module][cssomvm]. The **negative** type is the
+chosen one. Chrome has a [plan][chplan] to change its behavior. More
 information is at [#6][].
 
-[CSSOMVM]:https://drafts.csswg.org/cssom-view/
-[chplan]:https://www.chromestatus.com/feature/5759578031521792
-[#6]:https://github.com/othree/jquery.rtl-scroll-type/issues/6
+[cssomvm]: https://drafts.csswg.org/cssom-view/
+[chplan]: https://www.chromestatus.com/feature/5759578031521792
+[#6]: https://github.com/othree/jquery.rtl-scroll-type/issues/6
 
 ## License
 
@@ -99,4 +99,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
